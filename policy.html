@@ -1,0 +1,610 @@
+---
+layout: page
+---
+<div class="row">
+    <div class="col-md-12 shadow-sm p-3 mb-2 bg-white rounded">
+            <!-- content begins -->
+            <div align="center"><h1>Coder-Com Policy</h1>
+            <h4>Version 1.3, May 24, 2000</h4>
+            </div>
+            <ul>
+              <li><a href="#introduction">Introduction and 
+              definitions</a> </li>
+              <li style="LIST-STYLE-TYPE: none">&nbsp;
+              <ul>
+                <li><a href="#tasks">Tasks</a> </li>
+                <li><a href="#goals">Goals</a> </li>
+              </ul>
+              </li>
+              <li style="LIST-STYLE-TYPE: none">&nbsp;
+              <ul>
+                <li><a href="#maintainer">The maintainer</a>
+                </li>
+                <li><a href="#secretary">The secretary</a>
+                </li>
+                <li><a href="#senior">Senior coders</a> </li>
+                <li><a href="#helpers">Helpers</a> </li>
+              </ul>
+              </li>
+              <li><a href="#mailing">Mailing lists</a> </li>
+              <li style="LIST-STYLE-TYPE: none">&nbsp;
+              <ul>
+                <li><a href="#coder-comlist">
+                Coder-com@undernet.org</a> </li>
+                <li><a href="#coderlist">Coders@undernet.org</a>
+                </li>
+                <li><a href="#bugslist">Bugs@undernet.org</a>
+                </li>
+                <li><a href="#patcheslist">
+                Patches@undernet.org</a> </li>
+              </ul>
+              </li>
+              <li><a href="#procedures">Procedures</a> </li>
+              <li style="LIST-STYLE-TYPE: none">&nbsp;
+              <ul>
+                <li><a href="#membernomination">Nomination of 
+                members</a> </li>
+                <li style="LIST-STYLE-TYPE: none">&nbsp;
+                <ul>
+                  <li><a href="#nomsenior">Nomination of the 
+                  senior coders</a> </li>
+                  <li><a href="#nommaintainer">Nomination of 
+                  the maintainer</a> </li>
+                  <li><a href="#nomsecretary">Nomination of 
+                  the secretary</a> </li>
+                </ul>
+                </li>
+                <li><a href="#voting">Voting</a> </li>
+                <li style="LIST-STYLE-TYPE: none">&nbsp;
+                <ul>
+                  <li><a href="#silent">Silent agreement</a>
+                  </li>
+                  <li><a href="#quick">Quick informal voting</a>
+                  </li>
+                  <li><a href="#formal">Formal voting</a> </li>
+                </ul>
+                </li>
+                <li><a href="#patchapproval">Approval of 
+                patches</a> </li>
+                <li><a href="#approvalformal">Approval of 
+                formal releases</a> </li>
+                <li><a href="#approvalsemantic">Approval of 
+                protocol/semantic changes</a> </li>
+              </ul>
+              </li>
+            </ul>
+            <h1><span style="FONT-SIZE: 16pt">The Undernet 
+            Coders Committee</span></h1>
+            <h2><a name="introduction">Introduction and 
+            definitions</a>.</h2>
+            <p>This document describes how the Undernet's 
+            coder committee should work. The formal procedures 
+            it uses, the position of the people it is composed 
+            of, and the tasks it should accomplish. Once 
+            approved by the Undernet admins, this will become 
+            the reference set of rules used by the committee.</p>
+            <h3><a name="tasks">Tasks</a></h3>
+            <p>The Undernet Coder Committee (hereafter called 
+            coder-com or simply 'the committee') is in charge 
+            of maintaining, debugging, upgrading, and 
+            improving the code of the Undernet's server, 
+            including protocol used for server-server 
+            communication and for client-server communication, 
+            the code related to additional services linked as 
+            different daemons where it is considered desirable 
+            by the Undernet admins, and the documentation of 
+            all the above.</p>
+            <p>It is formally accepted that any material (code 
+            and documentation) produced by the committee has 
+            to be released under the GNU General Public 
+            License. What is not GPL is beyond the scope of 
+            coder-com and is released and maintained 
+            elsewhere.</p>
+            <p>Similarly, it must be clear that while anything 
+            developed by the committee is GPL and so anyone 
+            (including individuals and other networks) is 
+            welcome to use it for anything acceptable under 
+            the license, the main scope of the committee is to 
+            develop the code for the Undernet network, so only 
+            those changes, features, or services used by the 
+            Undernet network are part of the work of the 
+            committee.</p>
+            <h3><a name="goals">Goals</a></h3>
+            <p>The major goals of the committee are (in 
+            descending order of priority):</p>
+            <ul>
+              <li>Diagnosing and removing bugs in the current 
+              code. </li>
+              <li>Improving the performances of the server 
+              code used for Undernet. </li>
+              <li>Making the codebase more stable, more 
+              consistent, and more maintainable. </li>
+              <li>Documenting both existing and newly written 
+              code. </li>
+              <li>Adding services and features while keeping 
+              backwards compatibility with existing servers, 
+              clients, and formal or informal standards. </li>
+              <li>Developing new features for client use in 
+              cooperation with the developers of other major 
+              networks' and the developers of the major IRC 
+              clients. </li>
+            </ul>
+            <h2><a name="members">Members</a></h2>
+            <p>The committee has different kinds of members 
+            with different roles: a maintainer, a secretary, a 
+            small group of senior coders, and a larger group 
+            of helpers.</p>
+            <h3>The <a name="maintainer">maintainer</a></h3>
+            <p>The maintainer is the one responsible for 
+            keeping the integrity of the codebase. He or she 
+            (hereafter labeled "he" for brevity, not sexism) 
+            must be a very experienced coder and know the 
+            internals of the server in detail.</p>
+            <p>The maintainer is the only one who has direct 
+            shell access to CVS and is responsible for 
+            maintaining and administering the archive. It is 
+            one of his major duties to keep things in sync and 
+            verify that any change doesn't break the code or 
+            the protocol.</p>
+            <p>Most of the scope of the organization of 
+            coder-com is the attempt to reduce the workload on 
+            the maintainer by distributing what can be 
+            delegated to others.</p>
+            <p>The maintainer is a voting member of coder-com, 
+            his vote prevails in case of a tie in a formal 
+            call for votes, and his decisions about the actual 
+            coding matters take place with a "silent 
+            agreement" procedure as long as there are no 
+            objections, and temporarily hold if a formal vote 
+            is later held.</p>
+            <h3>The <a name="secretary">secretary</a></h3>
+            <p>The secretary basically has two tasks: working 
+            as a liason&nbsp; between the coder committee and the 
+            Undernet admins and keeping track of the formal 
+            issues related to the application of this document 
+            (issuing calls for votes, counting votes, and 
+            formalizing decisions).</p>
+            <p>The secretary doesn't need to be a coder, and 
+            it is preferable that he or she be an admin that 
+            volunteers for this task, in order to more easily 
+            establish a communication between the admins and 
+            the coder committee.</p>
+            <p>Since the secretary is not a coder, he has no 
+            voting rights on the committee.</p>
+            <p>Basically while the maintainer maintains the 
+            actual code (and has write access on the CVS tree 
+            and direct power of decision on the actions that 
+            regard it) the secretary maintains the lists (and 
+            has direct access to the memberships on the lists) 
+            and the committee itself.&nbsp;</p>
+            <p>No voting member of coder-com may also serve as 
+            secretary.</p>
+            <h3><a name="senior">Senior</a> coders</h3>
+            <p>Senior coders are the most experienced and 
+            trusted coders that put the biggest effort into 
+            ircu development. They are the only voting members 
+            of the coder committee, and have write access to 
+            the cvs archives. The maintainer is implicitly a 
+            senior coder.</p>
+            <h3><a name="helpers">Helpers</a></h3>
+            <p>Everyone willing to contribute to the work of 
+            the committee can be a helper simply by 
+            subscribing to coder-com@, which will be an open 
+            list.</p>
+            <p>Subscription to coders@ is open for "lurking" 
+            on the list but follows a slightly slower process 
+            in order to keep out troublemakers. Only those who 
+            have been removed from the list or those who are 
+            strongly objected to by senior coders will not be 
+            allowed to subscribe.</p>
+            <p>Helpers usually do not have posting access to 
+            the coders@ list nor read access to the bugs@ 
+            list, and they can't submit patches directly to 
+            the maintainer. Instead, they must follow the 
+            specific procedure described below to do it, in 
+            order to save some of the maintainer's time when 
+            checking in patches.</p>
+            <p>Tasks of the helpers include:</p>
+            <ul>
+              <li>Trying to help those who have trouble 
+              running or compiling the daemon and answering 
+              the easier questions asked on coder-com@. </li>
+              <li>Replying to those who make fuzzy 
+              feature-requests on coder-com and eventually 
+              trying to interpret such requests and find out 
+              if/how they can become realistic proposals for 
+              code changes. </li>
+              <li>Working on the documentation of the code.
+              </li>
+            </ul>
+            <p>A helper can be given access to posting to 
+            coders@ and/or read access on bugs@, after 
+            recommendation by a senior coder, and that would 
+            happen after an informal vote, pending no 
+            objections by other senior coders.</p>
+            <h2><a name="mailing">Mailing</a> Lists</h2>
+            <p>As a means of communication between the 
+            members, the committee will use a few lists. An 
+            open list like coder-com becomes too noisy and 
+            tends to degenerate to flames too often to be the 
+            most proper place for cooperatively discussing the 
+            changes to the codebase, however, this list will 
+            stay open and other discussion forums will be used 
+            alongside it. Thus the work of the coder committee 
+            will happen mainly on 4 discussion lists:</p>
+            <h3>
+            <a href="mailto:coder-com@undernet.org" name="coder-comlist">
+            Coder-com@undernet.org</a></h3>
+            <p>This remains a list open for both subscription 
+            and posting where people can ask for help about 
+            ircu and even non-coders can make requests or 
+            proposals for features and changes. Announcements 
+            about vote results, formal releases, and so on 
+            should take place here.&nbsp;</p>
+            <p>The secretary, when asked to with an informal 
+            vote by the senior coders, can remove 
+            troublemakers from this list if they continuously 
+            cause problems on the list without contributing 
+            anything productive.</p>
+            <h3>
+            <a href="mailto:coders@undernet.org" name="coderlist">
+            Coders@undernet.org</a></h3>
+            <p>This is a partially closed list where the 
+            senior coders can discuss the changes to the 
+            codebase, make informal votes, and so on.</p>
+            <p>The list is directly managed by the secretary.</p>
+            <p>Helpers can subscribe to the list, and the 
+            secretary will post weekly summaries of those 
+            wanting to subscribe. If there are no objections 
+            by senior coders, those wanting to subscribe will 
+            be allowed to.</p>
+            <p>If the secretary wishes, other lists may be 
+            created with specific functions, like coders-cfv 
+            used by the secretary to distribute the call for 
+            votes only to voting members, and coders-votes to 
+            collect and process them. However, these lists 
+            will not be places of discussion.</p>
+            <h3>
+            <a href="mailto:bugs@undernet.org" name="bugslist">
+            Bugs@undernet.org</a></h3>
+            <p>This list is, and has always been, the place to 
+            report bugs in the codebase. Here the senior 
+            coders might also discuss how to deal with the 
+            most critical bugs.</p>
+            <p>The list is directly managed by the secretary.</p>
+            <p>Only the secretary, the senior coders, and 
+            those trusted helpers that have been authorized by 
+            an informal vote may be subscribed to this list.</p>
+            <p>The list is open for posting by anyone, except 
+            troublemakers who have been labeled with "taboo 
+            headers" or something similar.</p>
+            <h3>
+            <a href="mailto:patches@undernet.org" name="patcheslist">
+            Patches@undernet.org</a></h3>
+            <p>This list should carry only robogenerated 
+            traffic, that is, only when the maintainer checks 
+            in a patch on the CVS a message should be 
+            automatically generated on this list with the 
+            actual patch in diff-rc3 format and its 
+            description.</p>
+            <p>The list should be open for subscription to 
+            anybody, but nobody should be allowed to post.</p>
+            <p>As a temporary solution the stuff posted to 
+            this list by humans is forwarded to the 
+            maintainer, but he might find it preferable to 
+            create some parallel support lists (like patches-checkin@ 
+            for patches to be checked in, which would be open 
+            for posting to trusted helpers and senior coders 
+            and readable only from the maintainer himself, 
+            patches-announce@ generated automatically by the 
+            CVS with only the description of the patches 
+            checked in by the maintainer for the coders that 
+            use CVS to get the stuff and thus don't need to 
+            subscribe to patches@.</p>
+            <h2><a name="procedures">Procedures</a></h2>
+            <p>Procedures for the tasks of the committee 
+            should be kept as simple and informal as possible, 
+            however, a minimum number of organizational 
+            details and formalities are needed to keep 
+            control.</p>
+            <p>Any decision taken by the coder committee 
+            follows one of these three paths: silent 
+            agreement, informal voting, or formal voting. The 
+            idea is that if there are not severe objections 
+            for something, it can be decided with silent 
+            agreement (that is, agreement is not reached if 
+            there are any objections). If some objection 
+            arises, an informal voting is asked by the 
+            maintainer on the closed coders@ list, and only as 
+            a last resort and/or for really major decisions 
+            the secretary may issue a formal cfv.</p>
+            <p>Moreover, most common actions of the committee 
+            should follow a defined procedural path, thought 
+            to simplify things and improve the stability of 
+            the code produced, its consistency, and the 
+            cooperation within the group.</p>
+            <p>The procedures for common tasks are described 
+            below, and following that are the descriptions of 
+            the procedures and exact definitions of "silent 
+            agreement," "formal voting," and "informal 
+            voting".</p>
+            <h3><a name="membernomination">Nomination of 
+            members</a></h3>
+            <p>Anyone can be a "helper" of the committee, just 
+            by subscribing to coder-com and contributing 
+            somehow (unless he manages to be removed from the 
+            list), thus a procedure for becoming a helper 
+            doesn't really exist.</p>
+            <p>The procedure for removing someone from 
+            coder-com in case he proves to be a troublemaker 
+            is formalized as follows: with request or proposal 
+            of one of the senior coders, a formal cfv is 
+            issued by the secretary, and if it passes, the 
+            subscription of the troublemaker to coder-com is 
+            removed and his account(s) will not be allowed to 
+            post.</p>
+            <h4><a name="nomsenior">Nomination of senior 
+            coders</a></h4>
+            <p>Senior coders are those who are extremely 
+            confident with the codebase internals, have proven 
+            to be productive in terms of patches and actual 
+            contributions to the code, are trusted by the 
+            admins, and have proven to be capable of 
+            cooperatively working together with the rest of 
+            the group.</p>
+            <p>The core group constituted&nbsp; by the senior 
+            coders must be kept small, and the only thing that 
+            any helper cannot do is vote on the critical 
+            decisions of coder-com, thus someone definitely 
+            does not need to be a senior coder to contribute 
+            to Undernet's server.</p>
+            <p>If one of the helpers has been contributing so 
+            effectively to the committee to be considered 
+            eligible to become a part of this core group, then 
+            one of the senior coders should submit a proposal 
+            nominating this person. Thereafter a formal vote 
+            takes place among senior coders. If the result of 
+            this cfv is positive then the secretary forwards 
+            it to the Undernet admins list where they will 
+            ratify the decision. Only after the decision has 
+            been ratified by formal votes on both the coder 
+            committee and the admins will a new senior coder 
+            be added.</p>
+            <p>The senior coders can be removed by the group 
+            only by decisions of Undernet admins, and should 
+            such a cfv on admins take place, the secretary of 
+            coder-com suspends the voting rights of that 
+            memeber on coder-com. Any of the senior coders can 
+            send a request to remove another trusted coder 
+            (with just case, of course) by sending a request 
+            to the secretary. The secretary then forwards the 
+            request to admins and waits for their decision.</p>
+            <h4><a name="nommaintainer">Nomination of the 
+            maintainer</a></h4>
+            <p>The maintainer is elected by the Undernet 
+            admins with a proposal made by the coders 
+            committee itself and stays in duty for one year. 
+            Should the term of one year happen to fall close 
+            to the deadline for a new major release of the 
+            server's code, the committee can decide to extend 
+            the term of the existing maintainer until after 
+            the formal release.</p>
+            <p>When a new maintainer is to be elected, any of 
+            the senior coders can volunteer himself for the 
+            task. The secretary will forward a list of all 
+            candidates to Undernet admins which following 
+            their usual procedures will elect a new 
+            maintainer.</p>
+            <h4><a name="nomsecretary">Nomination of the 
+            secretary</a></h4>
+            <p>The secretary is nominated directly by the 
+            Undernet admins, with the usual nomination and 
+            voting procedures used for the secretaries of the 
+            other committees.</p>
+            <p>Once nominated he is in charge for one year, 
+            unless he resigns or a decision of the admins 
+            removes him before the term is over.</p>
+            <p>As stated before the secretary doesn't actually 
+            need to be a coder, and cannot be a senior coder, 
+            but he should be a member of admins and coder-com.</p>
+            <h3><a name="voting">Voting</a></h3>
+            <p>Here are the descriptions of the voting 
+            procedures for the committee:</p>
+            <h4><a name="silent">Silent agreement</a></h4>
+            <p>For quick decisions any senior coder can 
+            propose a solution on the coders@ list. Should the 
+            proposal regard the actual code the maintainer can 
+            decide to accept the proposal immediately and 
+            apply it, or he can choose to wait four days 
+            before implementation. If the proposal regards 
+            membership on the committee or the lists (or 
+            something else non-code related) the secretary 
+            will wait four days before acting on the proposal.</p>
+            <p>These four days will be used to allow time for 
+            objections or discussion by the senior coders.</p>
+            <p>If no objections arise, the decision takes 
+            place immediately, but if one or more objections 
+            arise the maintainer (for what is pertinent to the 
+            actual code) or the secretary (for the rest) asks 
+            for an informal vote on the list.</p>
+            <h4><a name="quick">Quick informal voting</a></h4>
+            <p>Informal vote takes place publicly on the 
+            coders@ list without special formalities.</p>
+            <p>Who is in charge for the task (the maintainer 
+            when it's about the actual code or the secretary 
+            when it's about list membership and similar 
+            problems) calls for the vote on the public list, 
+            then the senior coders have six days to publicly 
+            vote. After the sixth day or when the votes 
+            collected determine the outcome, the person who 
+            issued the informal cfv collects the votes and 
+            acts on the outcome.</p>
+            <h4><a name="formal">Formal</a> voting</h4>
+            <p>Major decisions of the committee require a 
+            formal vote, and these include: decisions proposed 
+            by any of the senior coders like the nomination of 
+            a new member for bugs, the nomination of a new 
+            senior coder, a change in the server-server 
+            protocol, a major change in the client-server 
+            protocol (see below) and so on. Decision proposed 
+            by the maintainer like major formal releases, 
+            major design changes, and so on also require 
+            formal cfvs.</p>
+            <p>A formal cfv is always taken care of by the 
+            secretary, who mails an official call for votes to 
+            the senior coders. The senior coders then mail 
+            back privately to the secretary their votes.</p>
+            <p>The formal call for votes has a voting period 
+            of seven calendar days, and it cannot be placed 
+            across major holidays. To be valid at least 50% +1 
+            of those having voting rights must have voted or 
+            explicitly abstained. Someone who misses more than 
+            two consecutive votes has his voting rights 
+            suspended for the next two votes unless he is the 
+            maintainer.</p>
+            <p>In case the quorom is reached and the number of 
+            votes for "yes" and "no" is exactly equal, the 
+            vote of the maintainer is counted twice (and the 
+            secretary publishes on the list only the modified 
+            total count of votes, so as to not disclose the 
+            maintainer's vote). If the maintainer didn't vote 
+            or abstained, the secretary will inform him 
+            privately of this result and give him another 
+            chance to vote within 48 hours before letting the 
+            cfv go void.</p>
+            <h3><a name="patchapproval">Approval of patches</a></h3>
+            <p>Patches can be submitted by anybody, but the 
+            path they follow before being approved changes 
+            based on who proposes them.</p>
+            <p>Patches are those code submissions that don't 
+            severely alter the "behavior" of the server but 
+            only how it internally works; major changes follow 
+            a different procedure described later.</p>
+            <p>A patch must be submitted with a separate 
+            description section that include standard header 
+            fields, and the actual patch should be in 
+            "diff-rc3" format. The maintainer can ask that the 
+            description of the patch and other information are 
+            provided in a standard form that can be somehow 
+            automatically processed and archived, if he so 
+            chooses.</p>
+            <p>When a patch is prepared by one of the senior 
+            coders or from one of the trusted helpers, he can 
+            send it directly to the maintainer or, preferrably, 
+            send it to the coders@ list (and it is advisable 
+            that he let the coders@ list know what he is up to
+            <b>before</b> writing the patch). The maintainer 
+            should quickly verify it and then follow one of 
+            the following three steps. If the patch seems ok 
+            to him he puts it in the repository, and the 
+            senior coders can eventually object to it and ask 
+            for an informal voting. Otherwise, the maintainer 
+            could have found some problem with the patch, in 
+            which case he can either discuss privately the 
+            issue with the author until they find an agreement 
+            or ask for an informal vote on the list while 
+            keeping the patch suspended.</p>
+            <p>Finally, when a patch is submitted by a helper 
+            he has to contact first one of the senior coders, 
+            who will act as a "sponsor" for the patch and has 
+            the duty of verifying its behavior, personally 
+            testing it, checking for interference with other 
+            parts of the code, and fixing problems. If he 
+            finds the patch working and helpful, he posts it 
+            as "written by x, verified by me." This is to save 
+            the maintainer from the work of checking patches 
+            that are broken, unacceptable, or that break the 
+            protocol of the choices made by coder-com or 
+            admins.</p>
+            <p>Helpers that have been given posting access to 
+            coders@, can send patches they want to propose 
+            directly on the list, so that the maintainer can 
+            check them directly, but discussing and testing 
+            the patches together with one of the senior coders 
+            might be a good idea anyway.</p>
+            <h3><a name="approvalformal">Approval of formal 
+            releases</a></h3>
+            <p>The coding tasks of the committee move toward 
+            two different directions:</p>
+            <ul>
+              <li>Preparation of new releases </li>
+              <li>Bug fixing </li>
+            </ul>
+            <p>All optimization efforts, addition of new 
+            features, and protocol changes should be 
+            considered part of the "next major release". Thus 
+            the CVS should be divided into two branches: a 
+            stable working release and an "experimental" 
+            unstable release.</p>
+            <p>Most patches should be included only in the 
+            experimental source tree. When the experimental 
+            source tree has been found stable it can be 
+            formally released as stable.</p>
+            <p>Upon proposal by the maintainer, a formal vote 
+            takes place to make the current "experimental" the 
+            next stable formal release, and following that the 
+            maintainer prepares a tarball of the release to be 
+            submitted to admins that will become the 
+            "required" codebase for Undernet servers. Thus all 
+            patches included in the CVS should <b>not</b> be 
+            adopted in the network until the next formal 
+            release has been produced and approved.</p>
+            <p>An exceptional path is to be adopted for bug 
+            fixes considered urgent in the production network. 
+            When such a bug is found and a patch is prepared 
+            for it, the maintainers will post two different 
+            patches: one for the "experimental" tree and one 
+            for the "production" tree. The patch on the 
+            production tree should be applied as soon as 
+            possible by all the servers on the production 
+            network to fix the bug while waiting for the next 
+            formal release.</p>
+            <p>Upon informal voting on admins and pending the 
+            approval of the maintainer and no objections from 
+            the admins, some servers can volunteer to test the 
+            "experimental" source tree on the production 
+            network, but giving complete availability to help 
+            fix eventual problems by giving a shell to the 
+            senior coders that request it, and being ready to 
+            immediately apply any patch/change requested by 
+            coder-com. These servers should be willing to 
+            downgrade to the last "stable" source tree if any 
+            problem arises that can't be immediately solved.</p>
+            <h3><a name="approvalsemantic">Approval of 
+            protocol/semantic changes</a></h3>
+            <p>Some changes in the source tree can't be done 
+            with simple patches because they have a major 
+            impact on the network, and the following are 
+            examples:</p>
+            <ul>
+              <li>Changes to the server-server protocol's 
+              syntax or semantics </li>
+              <li>Changes in the client-server protocol that 
+              can break existing clients (like the removal of 
+              commands or the change of their behavior that 
+              cause any command that worked and produced a 
+              given effect with some parameters to behave 
+              differently or not work anymore with the same 
+              parameters and under the same conditions) </li>
+              <li>Addition of commands of features that might 
+              somehow violate any of the rules of the network 
+              (like allowing people to spam more, to have 
+              access to information they couldn't access 
+              before, to hide information that they couldn't 
+              hide before and so on) </li>
+            </ul>
+            <p>Such changes need to be approved by a formal 
+            vote on coder-com and then forwarded for 
+            ratification to admins.</p>
+            <p>Moreover changes in server-server protocol 
+            should always be checked in advance with the 
+            coders/maintainers of the services linked to the 
+            network, and as far as possible changes in the 
+            client-server protocol should always be checked in 
+            advance with the coders of the major clients and 
+            of the daemons of the other major networks. On 
+            this last subject Undernet will make any effort to 
+            promote cooperation with the coders of other major 
+            networks and of the most commonly used clients.</p>
+    </div>
+</div>
