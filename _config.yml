@@ -38,7 +38,7 @@ title-img: /logo.svg
 social-network-links:
   irc: "irc://irc.undernet.org:6667/coder-com"
   email: "coder-com@undernet.org"
-  facebook: UndernetIRCNetwork
+  # facebook: UndernetIRCNetwork
   github: UndernetIRC
 #  twitter: daattali
   rss: false
